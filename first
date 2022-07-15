@@ -1,0 +1,28 @@
+# Class Train which has methods to book seats, get status(no. of seats), fare info.
+
+class train:
+    def __init__(self,name ,seats,fare) -> None:
+        self.name = name
+        self.seats = seats
+        self.fare = fare
+
+    def bookTicket(self): # function to book the seat in the train
+        if(self.seats>0):
+            print("Your seat has been booked ! ")
+            self.seats = self.seats-1
+        else: 
+            print("Sorry! Seat not available. Try in tatkal")
+
+    def getStatus(self):     # function to know the no. of seats of a particular train
+        print(f"The name of the train is {self.name} and number of seats available are {self.seats} ")
+
+    def fareInfo(self):     #function to know the fare of a ticket.
+        print(f"The price of one ticket is Rs {self.fare}")
+
+a = train("Rajdhani Express ",300,90)     # object of the class Train
+a.getStatus()    # checking the status before booking
+a.bookTicket()   
+a.getStatus()    # checking the status after booking
+a.fareInfo()     # cheching fare .
+
+        
